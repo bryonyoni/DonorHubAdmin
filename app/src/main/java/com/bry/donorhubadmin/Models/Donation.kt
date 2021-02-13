@@ -4,6 +4,8 @@ class Donation(var description: String, var creation_time: Long, var donation_id
     var images: ArrayList<donation_image> = ArrayList()
     var activies: ArrayList<activity> = ArrayList()
     var is_taken_down = false
+    var quanitiy = ""
+    var mass = ""
 
     class donation_list(var donation_list: ArrayList<Donation>)
 
