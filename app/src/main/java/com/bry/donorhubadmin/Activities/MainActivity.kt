@@ -126,13 +126,13 @@ class MainActivity : AppCompatActivity(),
         db.collection("donations").get().addOnSuccessListener {
             if(!it.isEmpty){
                 for(doc in it.documents){
-                    if(doc.contains("don_obj")){
-                        val don = Gson().fromJson(doc["don_obj"] as String, Donation::class.java)
-                        if(doc.contains("taken_down")){
-                            don.is_taken_down = doc["taken_down"] as Boolean
-                        }
-                        donations.add(don)
-                    }
+//                    if(doc.contains("don_obj")){
+//                        val don = Gson().fromJson(doc["don_obj"] as String, Donation::class.java)
+//                        if(doc.contains("taken_down")){
+//                            don.is_taken_down = doc["taken_down"] as Boolean
+//                        }
+//                        donations.add(don)
+//                    }
                 }
             }
             hideLoadingScreen()
